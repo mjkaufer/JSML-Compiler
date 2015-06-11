@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="compile.js"></script>
 	</head>
 	<body>
 
@@ -16,5 +17,11 @@
 	    <button id="compile">Compile!</button>
 	    <p>Fork this at <a href="https://github.com/mjkaufer/JSML-Compiler">https://github.com/mjkaufer/JSML-Compiler</a></p>
 	    <p>Fork JSML at <a href="https://github.com/mjkaufer/JSML">https://github.com/mjkaufer/JSML</a></p>
+
+	    <script type="text/javascript">
+		    document.getElementById('compile').onclick = function(){
+		    	document.getElementById('out').value = parse(document.getElementById('in').value, true);
+		    }
+	    </script>
 	</body>
 </html>
